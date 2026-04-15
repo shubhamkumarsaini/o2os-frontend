@@ -51,7 +51,7 @@ return{home,work,social,overall:Math.round((home+work+social)/3),tiles};
 function zone(s){return s<=33?"red":s<=67?"yellow":"green";}
 function zc(s){if(s==null)return"#9ca3af";const z=zone(s);return z==="red"?"#d32f2f":z==="yellow"?"#f5c518":"#2e7d32";}
 function zbg(s){const z=zone(s);return z==="red"?"#ffebee":z==="yellow"?"#fffde7":"#e8f5e9";}
-function zl(z){return z==="red"?"Elevated":z==="yellow"?"Moderate":"Healthy";}
+// function zl(z){return z==="red"?"Elevated":z==="yellow"?"Moderate":"Healthy";}
 function useW(){
 const[w,setW]=useState(typeof window!=="undefined"?window.innerWidth:400);
 useEffect(()=>{let t;const h=()=>{clearTimeout(t);t=setTimeout(()=>setW(window.innerWidth),200);};window.addEventListener("resize",h);return()=>{window.removeEventListener("resize",h);clearTimeout(t);};},[]);
@@ -687,7 +687,7 @@ points={pts.map((s,i)=>`${xp(i)},${yp(s.scores[k])}`).join(" ")}/>}
 })()}
 <div style={{padding:12}}>
 {history.map(s=>{
-const sc=zc(s.scores.overall);
+// const sc=zc(s.scores.overall);
 return(
 <div key={s.id} onClick={()=>onView(s)} style={{background:"#fff",borderRadius:12,padding:"16px 18px",marginBottom:10,cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center",border:"1px solid #f0f0f0",boxShadow:"0 1px 4px rgba(0,0,0,0.05)"}}>
 <div>
