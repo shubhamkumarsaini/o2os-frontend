@@ -199,13 +199,16 @@ width:"100%",maxWidth:340,marginBottom:24,border:"1px solid rgba(255,255,255,0.1
     {/* Mayo Clinic — above buttons, always visible */}
     <div style={{textAlign:"center",marginBottom:24,width:"100%",maxWidth:340}}>
       <div style={{fontFamily:"system-ui,sans-serif",fontWeight:400,fontSize:12,color:"rgba(255,255,255,0.5)",lineHeight:1.9}}>
+        Patent Pending
+      </div>
+      <div style={{fontFamily:"system-ui,sans-serif",fontWeight:400,fontSize:12,color:"rgba(255,255,255,0.5)",lineHeight:1.9}}>
         The Oxygen Plan Corporation
       </div>
       <div style={{fontFamily:"system-ui,sans-serif",fontWeight:700,fontSize:14,color:"rgba(255,255,255,0.8)",letterSpacing:"0.01em"}}>
         Working in Collaboration With Mayo Clinic 
       </div>
       <div style={{fontFamily:"system-ui,sans-serif",fontWeight:700,fontSize:14,color:"rgba(255,255,255,0.8)",letterSpacing:"0.01em"}}>
-        Patent Pending
+        Clinically Validated
       </div>
       <div style={{fontSize:9,color:"rgba(255,255,255,0.25)",marginTop:4,lineHeight:1.7}}>
         Archives of Psychology, 2018 · Patent Pending / Track One
