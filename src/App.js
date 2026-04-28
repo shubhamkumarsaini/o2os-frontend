@@ -74,25 +74,22 @@ h.unshift(s);localStorage.setItem("o2os_h",JSON.stringify(h.slice(0,20)));return
 }
 
 // -- CAC LOGO ------------------------------------------------------------------
-function CACLogo({size=44}){
-const w=size*2.8;
-const subSz=Math.max(7,size*0.165);
-return(
-<div style={{display:"flex",flexDirection:"column",flexShrink:0,width:w}}>
-<div style={{display:"flex",justifyContent:"space-between",alignItems:"center",width:"100%"}}>
-<span style={{fontFamily:"Arial,Helvetica,sans-serif",fontWeight:900,fontSize:size*0.55,color:"#fff",lineHeight:1}}>C</span>
-<span style={{fontFamily:"Arial,Helvetica,sans-serif",fontWeight:300,fontSize:size*0.2,color:"rgba(255,255,255,0.6)"}}>·</span>
-<span style={{fontFamily:"Arial,Helvetica,sans-serif",fontWeight:900,fontSize:size*0.55,color:"#fff",lineHeight:1}}>A</span>
-<span style={{fontFamily:"Arial,Helvetica,sans-serif",fontWeight:300,fontSize:size*0.2,color:"rgba(255,255,255,0.6)"}}>·</span>
-<span style={{fontFamily:"Arial,Helvetica,sans-serif",fontWeight:900,fontSize:size*0.55,color:"#fff",lineHeight:1}}>C</span>
-</div>
-<div style={{display:"flex",justifyContent:"space-between",alignItems:"center",width:"100%",marginTop:5}}>
-{["Part","of","The","Baldwin","Group"].map((w,i)=>(
-<span key={i} style={{fontFamily:"system-ui,sans-serif",fontSize:subSz,fontWeight:300,color:"rgba(255,255,255,0.45)",lineHeight:1}}>{w}</span>
-))}
-</div>
-</div>
-);
+function CACLogo({ size = 44 }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <a href="/"  rel="noopener noreferrer">
+      <img
+        src="/logo.jpg"
+        alt="O2 Logo"
+        style={{
+          height: size,
+          width: "auto",
+          objectFit: "contain"
+        }}
+      />
+      </a>
+    </div>
+  );
 }
 
 // -- GAUGE -- pure CSS, zero JS state, zero re-renders -----------------------
