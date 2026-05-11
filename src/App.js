@@ -984,6 +984,14 @@ In Collaboration With The Oxygen Plan Corporation & Mayo Clinic<br/>
 }
 // -- APP -----------------------------------------------------------------------
 export default function App(){
+useEffect(() => {
+  const access = localStorage.getItem("o2os_access");
+
+  if (access !== "granted") {
+    window.location.href = "https://theoxygenplan.com/O2OS/access?door=signal";
+  }
+}, []);
+
 const{isD}=useW();
 // Single session state object -- atomic update, no split-state race conditions
 const[history,setHistory]=useState(loadH);
