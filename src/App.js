@@ -985,10 +985,20 @@ In Collaboration With The Oxygen Plan Corporation & Mayo Clinic<br/>
 // -- APP -----------------------------------------------------------------------
 export default function App(){
 useEffect(() => {
-  const access = localStorage.getItem("o2os_access");
+  const params = new URLSearchParams(window.location.search);
+  const access = params.get("access");
 
-  if (access !== "granted") {
-    window.location.href = "https://theoxygenplan.com/O2OS/access?door=signal";
+  if (access === "granted") {
+    localStorage.setItem("o2os_access", "granted");
+    window.history.replaceState({}, document.title, "/");
+    return;
+  }
+
+  const saved = localStorage.getItem("o2os_access");
+
+  if (saved !== "granted") {
+    window.location.href =
+      "https://theoxygenplan.com/O2OS/access?door=signal";
   }
 }, []);
 
